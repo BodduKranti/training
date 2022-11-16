@@ -1,0 +1,5 @@
+//npm start
+//npm i
+// React Bootsrap react install
+https://react-bootstrap.github.io/getting-started/introduction/
+//npm install react-bootstrap bootstrap
