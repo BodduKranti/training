@@ -12,7 +12,7 @@ const App = () => {
             {/* <Classparent /> */}
 
             {/* <Counter /> */}
-
+            <h1>Hi This code is uploaded</h1>
             <Forminput />
         </>
     )
