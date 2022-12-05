@@ -1,89 +1,120 @@
-import React from "react";
-import { Badge, Button, Card } from "react-bootstrap";
+import React, { Component } from "react";
+import Popupfetchprodct from "./Popupdatafetch/Popupfetchproduct";
 
-export default class Classapi extends React.Component {
+export default class Classapi extends Component {
     constructor() {
         super();
 
         this.state = {
-            storeProduct: []
+            storeProduct: [],
+            isPopupShow:false,
+            showprdctPop:{}
         }
     }
 
     componentDidMount() {
-        this.getData();
+        this.getPrduct();
     }
 
-
-    getData = () => {
+    getPrduct = () => {
         fetch('https://dummyjson.com/products')
             .then((res) => res.json())
-            .then((results) => {
-                this.setState({ storeProduct: results.products })
+            .then((result) => {
+                this.setState({ storeProduct: result.products })
             })
-            .catch((error) => { console.log(error) })
     }
+
+    showProduct = (product) => {
+        this.setState({isPopupShow:true})
+        this.setState({showprdctPop:product})
+        console.log(this.state.showprdctPop)
+    }
+   
 
     render() {
 
-       
-        
+        const getCategory = [...new Set(this.state.storeProduct.map((cat)=>{return cat.category}))]
+        const getBrand = [...new Set(this.state.storeProduct.map((brand)=>{return brand.brand}))]
+        console.log(getBrand)
 
-        const Cat = [...new Set(this.state.storeProduct.map((itms)=>itms.category))];
+        return (
+            <>
+                <div className="container">
+                    <h1>Fetch api</h1>
+                    <div className="row">
+                        <div className="col-md-3">
+                            <h5>Category</h5>
+                            <ul className="list-unstyled">
+                                {getCategory.map((cat)=>{
+                                    return(
+                                        <>
+                                            <li className="text-capitalize">{cat}</li>
+                                        </>
+                                    )
+                                })}
+                            </ul>
 
-
-        console.log(this.state.storeProduct)
-
-      
-
-        return <>
-            <h1>Fetch Api in Class Component</h1>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-3 col-12">
-                        <h3>Category</h3>
-                        <ul>
-                            {Cat.map((category)=>{
-                                return(
-                                    <>
-                                        <li>{category}</li>
-                                    </>
-                                )
-                                
-                            })}
-                        </ul>
-                    </div>
-                    <div className="col-md-9 col-12">
-                        <div className="row">
-                            {this.state.storeProduct.map((itms) => {
-                                return (
-                                    <>
-                                        <div className="col-md-4 col-sm-12 mb-3">
-                                            <Card className="w-100 h-100">
-                                                <Card.Img variant="top" style={{ maxHeight: '120px' }} src={itms.thumbnail} alt={itms.title} />
-                                                <Card.Body>
-                                                    <Card.Title>{itms.title}</Card.Title>
-                                                    <Badge>
-                                                        {itms.category}
-                                                    </Badge>
-                                                    <Card.Text>
-                                                        {itms.description.slice(0, 10)}...
-                                                    </Card.Text>
-                                                    <div className="p-3 my-3 bg-dark text-white text-center">
-                                                        $ {itms.price}
-                                                    </div>
-                                                    <Button variant="primary">View Product</Button>
-                                                </Card.Body>
-                                            </Card>
-                                        </div>
-                                    </>
-                                )
-                            })}
+                            <h5>Brand</h5>
+                            <ul className="list-unstyled">
+                                {getBrand.map((brand)=>{
+                                    return(
+                                        <>
+                                            <li className="text-capitalize">{brand}</li>
+                                        </>
+                                    )
+                                })}
+                            </ul>
                         </div>
+                        <div className="col-md-9">
+                            <div className="row">
+                                {this.state.storeProduct.map((itms) => {
+                                    return (
+                                        <>
+                                            <div className="col-md-4 mb-4">
+                                                <div className="card  h-100 ">
+                                                    <figure className="text-center">
+                                                        <img style={{maxHeight:'150px'}} src={itms.thumbnail} className="img-fluid" alt="" />
+                                                    </figure>
+                                                    <div className="card-header">
+                                                        <h5>{itms.title}</h5>
+                                                    </div>
+                                                    <div className="card-body">
+                                                        <div className="d-flex justify-content-between">
+                                                            <div className="badge bg-primary">
+                                                                {itms.category}
+                                                            </div>
+                                                            <div className="badge bg-warning">
+                                                                {itms.brand}
+                                                            </div>
+                                                        </div>
+                                                        <p className="my-2">
+                                                            {itms.description.slice(0,40)}
+                                                        </p>
+                                                        <div className="p-1 bg-primary text-center fs-5 fw-bold">
+                                                            {itms.price}
+                                                        </div>
 
+                                                    </div>
+                                                    <div className="card-footer d-flex">
+                                                        <button className="btn btn-primary" onClick={()=>this.showProduct(itms)} >View Product</button>
+                                                        <button className="btn btn-danger">Add to Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </>
+
+                <Popupfetchprodct
+                    show={this.state.isPopupShow} 
+                    onHide={()=>this.setState({isPopupShow:false})}
+                    product={this.state.showprdctPop}
+                />
+            </>
+        )
     }
 }

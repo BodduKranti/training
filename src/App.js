@@ -6,6 +6,8 @@ import Parent from "./Props/Parent";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap';
+
+
 import Classapi from "./Classapi/Classapi";
 
 
