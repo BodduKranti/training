@@ -9,6 +9,7 @@ import 'react-bootstrap';
 
 
 import Classapi from "./Classapi/Classapi";
+import Usestatehook from "./Hooks/Usestate/Usestatehook";
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
 
             {/* <Counter /> */}
             {/* <h1>Hi This code is uploaded</h1> */}
-            <Classapi />
+            <Usestatehook />
         </>
     )
 }
