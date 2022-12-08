@@ -41,9 +41,9 @@ const Usestatehook = () => {
         setData({name:'Ram', phone:987654321})
     }
 
-    const addData = () => {
+    const addData = (e) => {
         setStoreData([...storeData, inputAdd])
-        // setInputAdd(e.target.value='')
+        setInputAdd('')
     }
 
     return(
@@ -57,8 +57,8 @@ const Usestatehook = () => {
 
                         {/* <button className="btn btn-primary" onClick={()=>setCount(count + 1))}>Increment</button> */}
                         
-                        <button className="btn btn-primary" onClick={increament}>Increment</button>
-                        <button className="btn btn-danger" onClick={decremtn}>Decrement</button>
+                        <button className="btn btn-primary" onClick={()=>setCount(count+1)}>Increment</button>
+                        <button className="btn btn-danger" onClick={()=>setCount(Math.max(count-1,0))}>Decrement</button>
                     </div>
                     <div className="col-md-6 d-flex fs-5 fw-bold align-items-center">{count}</div>
                      
@@ -67,7 +67,7 @@ const Usestatehook = () => {
                 <h4>Input Value</h4>
                 <div className="row">
                     <div className="col-md-4">
-                        <input type="text" className="form-control" onChange={(e)=>setInputVal(e.target.value)} />
+                        <input type="text" className="form-control" value={inputVal} onChange={(e)=>setInputVal(e.target.value)} />
                     </div>
                     <div className="col-md-5">
                         {inputVal}

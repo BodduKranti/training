@@ -10,6 +10,8 @@ import 'react-bootstrap';
 
 import Classapi from "./Classapi/Classapi";
 import Usestatehook from "./Hooks/Usestate/Usestatehook";
+import Mainstore from "./Hooks/Usestate/Actions/Mainstore";
+import Useeffect from "./Hooks/UseEffect/Useeffect";
 
 
 const App = () => {
@@ -19,7 +21,8 @@ const App = () => {
 
             {/* <Counter /> */}
             {/* <h1>Hi This code is uploaded</h1> */}
-            <Usestatehook />
+            {/* <Mainstore /> */}
+            <Useeffect />
         </>
     )
 }
