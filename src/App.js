@@ -15,6 +15,8 @@ import Useeffect from "./Hooks/UseEffect/Useeffect";
 import MainParent from "./Hooks/Usecontext/MainParent";
 import AllProvidercontex from "./Hooks/Usecontext/AllProvidercontex";
 import Userrefn from "./Hooks/Userref/Userrefn";
+import Userreducer from "./Hooks/Userreducer/Userreducer";
+import Userrducertodo from "./Hooks/Userreducer/Userrducertodo";
 
 export const LoginUser = createContext();
 
@@ -36,9 +38,12 @@ const App = () => {
                 {/* <Mainstore /> */}
                 {/* <Useeffect /> */}
                 {/* <MainParent /> */}
-                <Userrefn />
+                {/* <Userrefn /> */}
             </LoginUser.Provider>
             </AllProvidercontex>
+
+            {/* <Userreducer /> */}
+            <Userrducertodo />
         </>
     )
 }
