@@ -17,6 +17,9 @@ import AllProvidercontex from "./Hooks/Usecontext/AllProvidercontex";
 import Userrefn from "./Hooks/Userref/Userrefn";
 import Userreducer from "./Hooks/Userreducer/Userreducer";
 import Userrducertodo from "./Hooks/Userreducer/Userrducertodo";
+import Usecallback from "./Hooks/Usecallback/Usecallback";
+import Usememo from "./Hooks/Usememo/Usememo";
+import Maindata from "./Hooks/Customhook/Maindata";
 
 export const LoginUser = createContext();
 
@@ -43,7 +46,10 @@ const App = () => {
             </AllProvidercontex>
 
             {/* <Userreducer /> */}
-            <Userrducertodo />
+            {/* <Userrducertodo /> */}
+            {/* <Usecallback /> */}
+            {/* <Usememo /> */}
+            <Maindata />
         </>
     )
 }
