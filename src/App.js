@@ -20,6 +20,7 @@ import Userrducertodo from "./Hooks/Userreducer/Userrducertodo";
 import Usecallback from "./Hooks/Usecallback/Usecallback";
 import Usememo from "./Hooks/Usememo/Usememo";
 import Maindata from "./Hooks/Customhook/Maindata";
+import Datarecoreds from "./Axios/Datarecoreds";
 
 export const LoginUser = createContext();
 
@@ -49,7 +50,8 @@ const App = () => {
             {/* <Userrducertodo /> */}
             {/* <Usecallback /> */}
             {/* <Usememo /> */}
-            <Maindata />
+            {/* <Maindata /> */}
+            <Datarecoreds />
         </>
     )
 }
