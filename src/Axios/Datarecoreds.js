@@ -48,7 +48,7 @@ const Datarecoreds = () => {
                                 </div>
 
                             </> : <>
-                                <h3>There is no Records for Now</h3>
+                                <h3 className='text-danger border p-3 rounded text-center'>There is no Records for Now</h3>
                             </>}
 
                         </div>

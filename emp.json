@@ -1,3 +1,28 @@
 {
-  "emp": []
+  "emp": [
+    {
+      "empName": "Ram Charan Rao",
+      "empPhone": "07225838649",
+      "empEmail": "formtest@v6live.com",
+      "empState": "Telangana",
+      "empAdd": "test\n12",
+      "id": 2
+    },
+    {
+      "empName": "Kusuma  Kumari",
+      "empPhone": "9876564567",
+      "empEmail": "kusuma@gmail.com",
+      "empState": "Andra Pradesh",
+      "empAdd": "Anath puram",
+      "id": 3
+    },
+    {
+      "empName": "Haris",
+      "empPhone": "986896986",
+      "empEmail": "harish@text.com",
+      "empState": "Karntaka",
+      "empAdd": "Banglore",
+      "id": 4
+    }
+  ]
 }

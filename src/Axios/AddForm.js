@@ -16,9 +16,14 @@ const AddForm = ({Results}) => {
         setField({ ...field, [e.target.name]: e.target.value })
     }
 
+    
     const addField = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:3000/emp', field)
+        if(field.empName==='' || field.empEmail==='' || field.empPhone==='' || field.empAdd===''){
+            alert('not work')
+        }
+        else{
+            await axios.post('http://localhost:3000/emp', field)
             .then((res) => {
                 setField({
                     empName: "",
@@ -29,6 +34,7 @@ const AddForm = ({Results}) => {
                 })
                 Results();
             })
+        }
     }
 
 
