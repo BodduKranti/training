@@ -1,20 +1,3 @@
 {
-  "emp": [
-    {
-      "empName": "Kusuma",
-      "empPhone": "9876543256",
-      "empEmail": "kusuma@text.com",
-      "empState": "Telengana",
-      "empAdd": "Hyderabad",
-      "id": "18EitFa"
-    },
-    {
-      "empName": "Employee 1",
-      "empPhone": "2345678965",
-      "empEmail": "emp@test.com",
-      "empState": "Rajastaan",
-      "empAdd": "Jaipur",
-      "id": "1dndK30"
-    }
-  ]
+  "emp": []
 }
