@@ -1,14 +1,6 @@
 {
   "emp": [
     {
-      "empName": "Ram Charan Rao",
-      "empPhone": "07225838649",
-      "empEmail": "formtest@v6live.com",
-      "empState": "Telangana",
-      "empAdd": "test\n12",
-      "id": 2
-    },
-    {
       "empName": "Kusuma  Kumari",
       "empPhone": "9876564567",
       "empEmail": "kusuma@gmail.com",
@@ -17,11 +9,45 @@
       "id": 3
     },
     {
-      "empName": "Haris",
+      "empName": "Haris Rao",
       "empPhone": "986896986",
       "empEmail": "harish@text.com",
       "empState": "Karntaka",
       "empAdd": "Banglore",
+      "id": 4
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "prdName": "Lg Washing Machine",
+      "prdCat": "Electronics",
+      "prdBrand": "Lg",
+      "prdPrice": "12000",
+      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    },
+    {
+      "prdName": "Samsung Mobile",
+      "prdCat": "Electronics",
+      "prdBrand": "Samsung",
+      "prdPrice": "15000",
+      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+      "id": 2
+    },
+    {
+      "prdName": "Sofa set",
+      "prdCat": "Furniture",
+      "prdBrand": "Kamal",
+      "prdPrice": "20000",
+      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+      "id": 3
+    },
+    {
+      "prdName": "Plastic Chair",
+      "prdCat": "Furniture",
+      "prdBrand": "Kamal",
+      "prdPrice": "1200",
+      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
       "id": 4
     }
   ]
