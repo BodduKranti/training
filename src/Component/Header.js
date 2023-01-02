@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -18,6 +18,12 @@ const Header = () => {
                                 <NavDropdown.Item as={NavLink} to="/productadd">
                                     Product Add
                                 </NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/prodcat">
+                                    Product Category
+                                </NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/productCateItms">
+                                    Product Category Items
+                                </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
@@ -27,6 +33,12 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
                             
                         </Nav>
+                        <div className='ms-auto text-white'>
+                            <Link className='text-white'>
+                                Cart  <span class="badge badge-danger bg-danger">9</span>
+                            </Link>
+                            
+                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

@@ -16,6 +16,10 @@ import Home from "./Pages/Home";
 import Product from "./Pages/Product";
 import Pagenotfound from "./Pages/Pagenotfound";
 import Addproduct from "./Pages/Products/Addproduct";
+import Productsingle from "./Pages/Products/Productsingle";
+import Productcat from "./Pages/Products/Productcat";
+import ProductcatItms from "./Pages/Products/ProductcatItms";
+import ProductcategoItms from "./Pages/Products/ProductcategoItms";
 
 const App = () => {
 
@@ -28,9 +32,12 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/product" element={<Product />} />
+                    <Route path="/products/:id" element={<Productsingle />} />
+                    <Route path="/prodcat" element={<Productcat />} />
+                    <Route path="/prodcat/:name" element={<ProductcatItms />} />
                     <Route path="/productadd" element={<Addproduct />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/productCateItms" element={<ProductcategoItms />} />
                     {/* <Route path="/*" element={<Pagenotfound />} /> */}
                     <Route path="/*" element={<Navigate to="/" />} />
                 </Routes>

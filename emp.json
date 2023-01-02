@@ -49,6 +49,14 @@
       "prdPrice": "1200",
       "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
       "id": 4
+    },
+    {
+      "prdName": "Leather Bags",
+      "prdCat": "Home Applieance",
+      "prdBrand": "Kamal",
+      "prdPrice": "500",
+      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+      "id": 5
     }
   ]
 }
