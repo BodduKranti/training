@@ -19,44 +19,20 @@
   ],
   "product": [
     {
-      "id": 1,
-      "prdName": "Lg Washing Machine",
-      "prdCat": "Electronics",
-      "prdBrand": "Lg",
-      "prdPrice": "12000",
-      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
-    },
-    {
-      "prdName": "Samsung Mobile",
-      "prdCat": "Electronics",
-      "prdBrand": "Samsung",
-      "prdPrice": "15000",
-      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-      "id": 2
-    },
-    {
       "prdName": "Sofa set",
       "prdCat": "Furniture",
       "prdBrand": "Kamal",
       "prdPrice": "20000",
-      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-      "id": 3
-    },
-    {
-      "prdName": "Plastic Chair",
-      "prdCat": "Furniture",
-      "prdBrand": "Kamal",
-      "prdPrice": "1200",
       "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
-      "id": 4
+      "id": 1
     },
     {
-      "prdName": "Leather Bags",
-      "prdCat": "Home Applieance",
-      "prdBrand": "Kamal",
-      "prdPrice": "500",
-      "prdDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-      "id": 5
+      "prdName": "LG Tv",
+      "prdCat": "Electronics",
+      "prdBrand": "Lg",
+      "prdPrice": "20000",
+      "prdDesc": "impedit nam nisi quos rem atque voluptatem. Aut dolorum voluptatem non voluptates internos sit sint ipsam rem veritatis odit qui nisi doloremque ea velit eius sed quibusdam voluptates.",
+      "id": 3
     }
   ]
 }

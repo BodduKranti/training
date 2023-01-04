@@ -1,52 +1,11 @@
-import axios from 'axios'
 import React from 'react'
-import { useState } from 'react'
 import Innerhero from '../../Component/Innerhero'
-import {useNavigate} from 'react-router-dom'
+import { useContext } from 'react'
+import { Allservices } from '../../Contextapi/Contextapi'
 
-const Addproduct = () => {
+const Addproduct = () => {  
 
-    const Navigate = useNavigate();
-    const [erMsg,setErMsg]=useState('')
-
-    const [fields, setFields] = useState({
-        prdName: '',
-        prdCat: '',
-        prdBrand: '',
-        prdPrice: '',
-        prdDesc: ''
-    })
-
-    const inputHandler = (e) => {
-        setFields({ ...fields, [e.target.name]: e.target.value })
-    }
-
-    const addProduct = async (e) => {
-        e.preventDefault();
-        if( fields.prdName ==='' || 
-            fields.prdCat ==='' || 
-            fields.prdBrand ==='' || 
-            fields.prdPrice ==='' ||
-            fields.prdDesc ===''
-        )
-        {
-            setErMsg('Please fill all the fields')
-        }
-        else{
-            await axios.post(`http://localhost:3000/product`, fields)
-            .then((res) => {
-                setFields({
-                    prdName: '',
-                    prdCat: '',
-                    prdBrand: '',
-                    prdPrice: '',
-                    prdDesc: ''
-                })
-                Navigate("/product")
-            })
-            .catch(error=>console.log(error))
-        }     
-    }
+    const {fields,erMsg,inputHandler,addProduct} = useContext(Allservices)
 
     return (
         <>

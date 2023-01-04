@@ -1,22 +1,17 @@
-import axios from 'axios';
 import React from 'react'
-import { useState } from 'react';
+import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import Innerhero from '../../Component/Innerhero';
+import { Allservices } from '../../Contextapi/Contextapi';
 
 const Productsingle = () => {
 
     const { id } = useParams();
-
-    const [getItms, setGetItms] = useState({});
+    const {getItmsById, getItms} = useContext(Allservices);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/product/${id}`)
-            .then((res) => {
-                setGetItms(res.data)
-            })
-            .catch(error => console.log(error))
+        getItmsById(id);
     }, [id])
 
     console.log(id)

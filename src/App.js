@@ -2,7 +2,7 @@ import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap';
-
+import './app.css';
 // npm i react-router-dom 
 
 // import react router dom
@@ -20,12 +20,16 @@ import Productsingle from "./Pages/Products/Productsingle";
 import Productcat from "./Pages/Products/Productcat";
 import ProductcatItms from "./Pages/Products/ProductcatItms";
 import ProductcategoItms from "./Pages/Products/ProductcategoItms";
+import Contextprovider from "./Contextapi/Contextprovider";
+import Datafetchfun from "./Allservces/Datafetchfun";
+import Viewcart from "./Pages/Products/Viewcart";
 
 const App = () => {
 
     
     return (
         <>
+        <Contextprovider>
             <BrowserRouter>
                 <Header />
                 <Routes>
@@ -37,12 +41,15 @@ const App = () => {
                     <Route path="/prodcat/:name" element={<ProductcatItms />} />
                     <Route path="/productadd" element={<Addproduct />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/productCateItms" element={<ProductcategoItms />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/viewcart" element={<Viewcart />} />
                     {/* <Route path="/*" element={<Pagenotfound />} /> */}
+                    <Route path="/Datafetchfun" element={<Datafetchfun />} />
                     <Route path="/*" element={<Navigate to="/" />} />
                 </Routes>
                 <Footer />
-            </BrowserRouter>            
+            </BrowserRouter>  
+            </Contextprovider>          
         </>
     )
 }

@@ -1,0 +1,10 @@
+.close {
+    top: 50%;
+    right: 11px;
+    transform: translateY(-50%);
+    opacity: 0;
+    cursor: pointer;
+}
+.card:hover .close{
+    opacity: 1;
+}
