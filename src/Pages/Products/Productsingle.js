@@ -8,7 +8,7 @@ import { Allservices } from '../../Contextapi/Contextapi';
 const Productsingle = () => {
 
     const { id } = useParams();
-    const {getItmsById, getItms} = useContext(Allservices);
+    const {getItmsById, getItms,AddtoCart} = useContext(Allservices);
 
     useEffect(() => {
         getItmsById(id);
@@ -35,7 +35,7 @@ const Productsingle = () => {
                             </p>
                             <div className='row'>
                                 <div className='col-md-6 d-flex justify-content-between'>
-                                    <button className='btn btn-danger'>Add To Cart</button>
+                                    <button className='btn btn-danger' onClick={()=>AddtoCart(getItms)}>Add To Cart</button>
                                 </div>
                             </div>
                         </div>

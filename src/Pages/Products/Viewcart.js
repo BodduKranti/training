@@ -5,8 +5,8 @@ import Innerhero from '../../Component/Innerhero'
 import { Allservices } from '../../Contextapi/Contextapi'
 
 const Viewcart = () => {
-    const { cartNum } = useContext(Allservices);
-
+    const { cartNum,cartItmTotal,deleteCartItm } = useContext(Allservices);
+console.log(cartItmTotal)
     return (
         <>
             <Innerhero
@@ -23,24 +23,32 @@ const Viewcart = () => {
                                             <th>Product Name</th>
                                             <th>Product Category</th>
                                             <th>Product Brand</th>
-                                            <th>Product Desc</th>
                                             <th>Product Price</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {cartNum.map((itms) => {
+                                        {cartNum.map((itms, i) => {
                                             return (
                                                 <>
                                                     <tr>
                                                         <td>{itms.prdName}</td>
                                                         <td>{itms.prdCat}</td>
                                                         <td>{itms.prdBrand}</td>
-                                                        <td>{itms.prdDesc}</td>
                                                         <td>{itms.prdPrice}</td>
+                                                        <td><button onClick={()=>deleteCartItm(i)} className='btn btn-danger rounded-circle'>X</button></td>
                                                     </tr>
                                                 </>
                                             )
                                         })}
+
+                                        <tr>
+                                            <td><strong>Total</strong></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>{cartItmTotal}</td>
+                                            <td></td>
+                                        </tr>
 
                                     </tbody>
                                 </table>

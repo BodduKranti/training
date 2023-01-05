@@ -33,6 +33,14 @@
       "prdPrice": "20000",
       "prdDesc": "impedit nam nisi quos rem atque voluptatem. Aut dolorum voluptatem non voluptates internos sit sint ipsam rem veritatis odit qui nisi doloremque ea velit eius sed quibusdam voluptates.",
       "id": 3
+    },
+    {
+      "prdName": "Plasma TV",
+      "prdCat": "Electronics",
+      "prdBrand": "Sony",
+      "prdPrice": "45000",
+      "prdDesc": "This Tv is very best quality",
+      "id": 4
     }
   ]
 }

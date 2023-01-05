@@ -23,6 +23,8 @@ import ProductcategoItms from "./Pages/Products/ProductcategoItms";
 import Contextprovider from "./Contextapi/Contextprovider";
 import Datafetchfun from "./Allservces/Datafetchfun";
 import Viewcart from "./Pages/Products/Viewcart";
+import Purecomponent from "./Classcomponent/Purecomponent";
+import FuncPure from "./Classcomponent/FuncPure";
 
 const App = () => {
 
@@ -43,8 +45,10 @@ const App = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/viewcart" element={<Viewcart />} />
+                    <Route path="/Purecomponent" element={<FuncPure />} />
                     {/* <Route path="/*" element={<Pagenotfound />} /> */}
                     <Route path="/Datafetchfun" element={<Datafetchfun />} />
+                    <Route path="/ProductcategoItms" element={<ProductcategoItms />} />
                     <Route path="/*" element={<Navigate to="/" />} />
                 </Routes>
                 <Footer />
